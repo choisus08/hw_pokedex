@@ -18,10 +18,8 @@ app.get("/pokemon", (req, res) => {
 });
 
 // NEW
-app.get("/pokemon/:id", (req, res) => {
-    const id = req.params.id;
-    const pokemonName = pokemon[id];
-    res.render("new.ejs", {pokemonName})
+app.get("/pokemon/new", (req, res) => {
+    res.render("new.ejs")
 });
 
 // DESTROY
@@ -38,7 +36,11 @@ app.post("/pokemon", (req, res) => {
 // EDIT
 
 // SHOW
-
+app.get("/pokemon/:id", (req, res) => {
+    const id = req.params.id;
+    const pokeProfile = pokemon[id];
+    res.render("show.ejs", {pokeProfile})
+});
 
 // LISTENER
 app.listen(3000, () => {
