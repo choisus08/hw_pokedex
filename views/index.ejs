@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon</title>
+    <%- include("./imports.ejs") %>
+</head>
+<body>
+    
+    <h1>Gotta Catch 'em All, Pokemon!</h1>
+
+    <a href="/pokemon/:id"><button>Add New Pokemon</button></a>
+
+
+    <ul>
+        <% for (let i=0; i<pokemon.length; i++) { %>
+
+            <li><a href="/pokemon/<%= i %>"><%= pokemon[i].name %></a></li>
+        <% } %>
+    </ul>
+
+</body>
+</html>
