@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokemon</title>
+    <%- include("./imports.ejs") %>
 </head>
 <body>
 
@@ -12,8 +13,19 @@
 
     <img src="<%= pokeProfile.img %>" alt="Pokemon Image">
 
-    <h3>Name: <% pokeProfile.name %></h3>
+    <h3>Name: <%= pokeProfile.name %></h3>
+    <h4>Type: <%= pokeProfile.type %></h4>
+    <h4>HP: <%= pokeProfile.stats.hp %></h4>
+    <h4>Attack: <%= pokeProfile.stats.attack %></h4>
+    <h4>Defense: <%= pokeProfile.stats.defense %></h4>
 
+    <a href="/pokemon/<%= id %>/edit"><button>Edit</button></a>
+
+    <form action="/pokemon/<%= id %>?_method=DELETE" method="post">
+        <input type="submit" value="Delete"/>    
+    </form>
+
+    <h4><a href="/pokemon">Homepage</a></h4>
 
 
     
