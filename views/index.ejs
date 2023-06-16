@@ -13,11 +13,11 @@
 
     <a href="/pokemon/new"><button>Add New Pokemon</button></a>
 
-
     <ul>
         <% for (let i=0; i<pokemon.length; i++) { %>
-
-            <li><a href="/pokemon/<%= i %>"><%= pokemon[i].name %></a></li>
+            <li>
+                <a href="/pokemon/<%= i %>"><img src="<%= pokemon[i].img %>" alt="Pokemon Image"/></a>
+            </li>
         <% } %>
     </ul>
 
