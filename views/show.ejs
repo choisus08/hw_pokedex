@@ -9,7 +9,9 @@
 </head>
 <body>
 
-    <h2>Pokemon Profile</h2>
+    <div class="top">
+        <h1>Pokemon Profile</h1>
+    </div>
 
     <img src="<%= pokeProfile.img %>" alt="Pokemon Image">
 
@@ -33,10 +35,9 @@
         <form action="/pokemon/<%= id %>?_method=DELETE" method="post">
             <input type="submit" value="Delete"/>    
         </form>
-
     </div>
 
-    <h4><a href="/pokemon">Homepage</a></h4>
+    <h4><a class="home" href="/pokemon">Home</a></h4>
 
     
 </body>

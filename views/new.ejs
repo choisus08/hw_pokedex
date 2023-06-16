@@ -9,13 +9,17 @@
 </head>
 <body>
     
-    <h2>Pokemon Manager</h2>
+    <div class="top">
+        <h1>Pokemon Manager</h1>
+    </div>
 
     <h3>Create a Pokemon</h3>
 
-    <form action="/pokemon" method="post">
-        <input type="text" name="name" placeholder="pokemon name"/>
-        <input list="types" name="type" id="type" placeholder="Ex. Normal"/>
+    <img class="new_img" src="../img/pokeball.png" alt="New Pokemon Image" /> 
+
+    <form class="manager" class="new_form" action="/pokemon" method="post">
+        <input type="text" name="name" placeholder="Pokemon name"/>
+        <input list="types" name="type" id="type" placeholder="Type"/>
             <datalist id="types">
                 <option value="Normal">
                 <option value="Bug">
@@ -34,11 +38,13 @@
                 <option value="Steel">
                 <option value="Water">
             </datalist>
-        <input type="number" name="hp" placeholder="Pokemon HP" />
-        <input type="number" name="attack" placeholder="Pokemon attack">
-        <input type="number" name="defense" placeholder="Pokemon defense">
-        <input type="submit" value="Create Pokemon" />
+        <input type="number" name="hp" placeholder="HP" />
+        <input type="number" name="attack" placeholder="Attack">
+        <input type="number" name="defense" placeholder="Defense">
+        <input class="create" type="submit" value="Create Pokemon" />
     </form>
+
+    <h4><a class="home" href="/pokemon">Home</a></h4>
 
 </body>
 </html>

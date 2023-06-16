@@ -8,20 +8,21 @@
     <%- include("./imports.ejs") %>
 </head>
 <body>
-    
-    <h1>Pokedex</h1>
 
-    <a href="/pokemon/new"><button>Add New Pokemon</button></a>
+    <div class="top">
+        <h1>Pokedex</h1>
+        <a href="/pokemon/new"><button class="add">Add Pokemon</button></a>
+    </div>
 
-    <ul>
-        <% for (let i=0; i<pokemon.length; i++) { %>
-            
-            <li>
-                
-                <a href="/pokemon/<%= i %>"><img src="<%= pokemon[i].img %>" alt="Pokemon Image"/></a>
-            </li>
-        <% } %>
-    </ul>
+    <div class="bottom">
+        <ul>
+            <% for (let i=0; i<pokemon.length; i++) { %>
+                <li>
+                    <a href="/pokemon/<%= i %>"><img src="<%= pokemon[i].img %>" alt="Pokemon Image"/></a>
+                </li>
+            <% } %>
+        </ul>
+    </div>
 
 </body>
 </html>

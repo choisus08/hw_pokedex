@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
 body {
-    background-color: rgb(186, 9, 9);
+    background-color: rgb(85, 88, 88);
+}
+
+h1, .add, .create, .home{
+    font-family: VT323;
 }
 
 h1 {
     color: black;
+    font-size: 3em;
 }
 
 ul {
@@ -12,8 +20,53 @@ ul {
 
 img {
     border-radius: 25px;
+    height: 12em;
+    width: 12em;
+    padding: .5em;
+
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 0 1em;
+    background-color:  rgb(186, 9, 9);
+}
+
+.bottom {
+    background-color: rgb(240, 202, 50);
+    border-radius: 20px;
+}
+
+.add {
+    border-radius: 15px;
+    padding: .7em;
+    background-color: rgb(228, 175, 42);
+    border: none;
+    font-size: 1.2em;
+}
+
+.manager {
+    display: grid;
+    gap: 1em;
+    width: 4em;
+}
+
+.create {
+    border-radius: 10px;
+    padding: .5em;
+    font-size: 1em;
+    background-color: rgb(228, 175, 42);
 }
 
 .change {
     display: flex;
+}
+
+.home {
+    color: white;
+    font-size: 1.5em;
 }
