@@ -9,12 +9,13 @@
 </head>
 <body>
     
-    <h1>Gotta Catch 'em All, Pokemon!</h1>
+    <h1>Pokedex</h1>
 
     <a href="/pokemon/new"><button>Add New Pokemon</button></a>
 
     <ul>
         <% for (let i=0; i<pokemon.length; i++) { %>
+            
             <li>
                 <a href="/pokemon/<%= i %>"><img src="<%= pokemon[i].img %>" alt="Pokemon Image"/></a>
             </li>
@@ -23,3 +24,4 @@
 
 </body>
 </html>
+

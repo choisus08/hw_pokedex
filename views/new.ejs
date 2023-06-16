@@ -9,13 +9,17 @@
 </head>
 <body>
     
-    <h2>Pokemon</h2>
+    <h2>Pokemon Manager</h2>
 
-    <h3>Add a Pokemon</h3>
+    <h3>Create a Pokemon</h3>
 
     <form action="/pokemon" method="post">
         <input type="text" name="name" placeholder="pokemon name" />
-        <input type="submit" value="Add Pokemon" />
+        <input type="text" name="type" placeholder="Ex: Fire" />
+        <input type="number" name="hp" placeholder="Pokemon HP" />
+        <input type="number" name="attack" placeholder="Pokemon attack">
+        <input type="number" name="defense" placeholder="Pokemon defense">
+        <input type="submit" value="Create Pokemon" />
     </form>
 
 </body>

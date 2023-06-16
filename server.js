@@ -38,17 +38,28 @@ app.delete("/pokemon/:id", (req, res) => {
 app.put("/pokemon/:id", (req, res) => {
     const id = req.params.id;
     let updatedPokemon = pokemon[id];
-    updatedPokemon.name = req.body.name
-    pokemon[id] = updatedPokemon
+    updatedPokemon.name = req.body.name;
+    pokemon[id] = updatedPokemon;
     res.redirect("/pokemon");
 });
 
 
 // CREATE 
 app.post("/pokemon", (req, res) => {
-    let newPokemon = {};
-    newPokemon.stats = {};
-    pokemon.push(req.body);
+    let newPokemon = {
+        name: req.body.name,
+        id: req.body.id,
+        img: req.body.img
+    };
+    let type = req.body.type;
+    let typeArray = type.split(" ");
+    newPokemon.type = typeArray;
+    newPokemon.stats = {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense
+    };
+    pokemon.unshift(newPokemon);
     res.redirect("/pokemon");
 });
 

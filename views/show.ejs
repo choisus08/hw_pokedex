@@ -13,20 +13,30 @@
 
     <img src="<%= pokeProfile.img %>" alt="Pokemon Image">
 
-    <h3>Name: <%= pokeProfile.name %></h3>
-    <h4>Type: <%= pokeProfile.type %></h4>
-    <h4>HP: <%= pokeProfile.stats.hp %></h4>
-    <h4>Attack: <%= pokeProfile.stats.attack %></h4>
-    <h4>Defense: <%= pokeProfile.stats.defense %></h4>
+    <h2 class="name"><%= pokeProfile.name %></h2>
+    
+    <div class="type">
+        <h4>Type:</h4> 
+        <h5><%= pokeProfile.type %></h5>
+    </div>
 
-    <a href="/pokemon/<%= id %>/edit"><button>Edit</button></a>
+    <div class="stats">
+        <h4>Stats:</h4>
+        <h5>HP: <%= pokeProfile.stats.hp %></h4>
+        <h5>Attack: <%= pokeProfile.stats.attack %></h4>
+        <h5>Defense: <%= pokeProfile.stats.defense %></h4>
+    </div>
 
-    <form action="/pokemon/<%= id %>?_method=DELETE" method="post">
-        <input type="submit" value="Delete"/>    
-    </form>
+    <div class="change">
+        <a href="/pokemon/<%= id %>/edit"><button>Edit</button></a>
+
+        <form action="/pokemon/<%= id %>?_method=DELETE" method="post">
+            <input type="submit" value="Delete"/>    
+        </form>
+
+    </div>
 
     <h4><a href="/pokemon">Homepage</a></h4>
-
 
     
 </body>

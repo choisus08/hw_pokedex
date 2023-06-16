@@ -1,7 +1,19 @@
+body {
+    background-color: rgb(186, 9, 9);
+}
+
 h1 {
-    color: red;
+    color: black;
 }
 
 ul {
     list-style: none;
+}
+
+img {
+    border-radius: 25px;
+}
+
+.change {
+    display: flex;
 }
