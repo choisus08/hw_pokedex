@@ -14,8 +14,26 @@
     <h3>Create a Pokemon</h3>
 
     <form action="/pokemon" method="post">
-        <input type="text" name="name" placeholder="pokemon name" />
-        <input type="text" name="type" placeholder="Ex: Fire" />
+        <input type="text" name="name" placeholder="pokemon name"/>
+        <input list="types" name="type" id="type" placeholder="Ex. Normal"/>
+            <datalist id="types">
+                <option value="Normal">
+                <option value="Bug">
+                <option value="Dragon">
+                <option value="Electric">
+                <option value="Fighting">
+                <option value="Fire">
+                <option value="Flying">
+                <option value="Ghost">
+                <option value="Grass">
+                <option value="Ground">
+                <option value="Ice">
+                <option value="Poison">
+                <option value="Psychic">
+                <option value="Rock">
+                <option value="Steel">
+                <option value="Water">
+            </datalist>
         <input type="number" name="hp" placeholder="Pokemon HP" />
         <input type="number" name="attack" placeholder="Pokemon attack">
         <input type="number" name="defense" placeholder="Pokemon defense">
