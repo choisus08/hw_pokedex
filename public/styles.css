@@ -5,7 +5,7 @@ body {
     background-color: rgb(85, 88, 88);
 }
 
-h1, .add, .create, .home{
+h1, h2, .add, .create, .edit_button, .delete_button, .edit_submit, .home, .img_container, .stats, .type{
     font-family: VT323;
 }
 
@@ -18,11 +18,24 @@ ul {
     list-style: none;
 }
 
-img {
+.index_img {
     border-radius: 25px;
-    height: 12em;
-    width: 12em;
+    height: 10em;
+    width: 10em;
     padding: .5em;
+}
+
+.show_img {
+    border-radius: 25px;
+    height: 14em;
+    width: 14em;
+    padding: .5em;
+}
+
+.img_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
 
 }
 
@@ -37,8 +50,35 @@ img {
 }
 
 .bottom {
-    background-color: rgb(240, 202, 50);
+    background-color: rgb(242, 231, 104);
     border-radius: 20px;
+    height: 100vh;    
+}
+
+.manager {
+    display: grid;
+    gap: 1em;
+    width: 4em;
+}
+
+.info {
+    display:flex;
+    gap: 3em;
+    text-align: center;
+}
+
+.name {
+    font-size: 2em;
+}
+
+.stats, .type {
+    font-size: 1.5em;
+    
+}
+
+.list{
+    text-align: left;
+    
 }
 
 .add {
@@ -49,24 +89,36 @@ img {
     font-size: 1.2em;
 }
 
-.manager {
-    display: grid;
-    gap: 1em;
-    width: 4em;
-}
-
-.create {
+.create, .edit_submit {
     border-radius: 10px;
     padding: .5em;
     font-size: 1em;
     background-color: rgb(228, 175, 42);
+    border: none;
+}
+
+.img_container {
+    border: 1px solid black;
+    text-align: center;
+    
 }
 
 .change {
     display: flex;
+    gap: 1em;
+       
+}
+
+.delete_button, .edit_button {
+    background-color: rgb(228, 175, 42);
+    border: none;   
 }
 
 .home {
-    color: white;
+    color: black;
     font-size: 1.5em;
+    background-color: rgb(228, 175, 42);
+    border: none;
+    padding: .5em;
+    border-radius: 15px;
 }

@@ -49,7 +49,7 @@ app.post("/pokemon", (req, res) => {
     let newPokemon = {
         name: req.body.name,
         id: req.body.id,
-        img: req.body.img
+        img: req.body.image || "/pokeball.png"
     };
     let type = req.body.type;
     let typeArray = type.split(" ");

@@ -11,33 +11,42 @@
 
     <div class="top">
         <h1>Pokemon Profile</h1>
+        <h4><a href="/pokemon"><button class="home">Home</button></a></h4>
     </div>
 
-    <img src="<%= pokeProfile.img %>" alt="Pokemon Image">
+    <div class="bottom">
+        <div class="img_container">
+            <h2 class="name"><%= pokeProfile.name %></h2>
 
-    <h2 class="name"><%= pokeProfile.name %></h2>
+            <img class="show_img" src="<%= pokeProfile.img %>" alt="Pokemon Image">
+
+            <div class="change">
+                <a href="/pokemon/<%= id %>/edit"><button class="edit_button">Edit</button></a>
+                <form action="/pokemon/<%= id %>?_method=DELETE" method="post">
+                    <input class="delete_button" type="submit" value="Delete"/>    
+                </form>
+            </div>
+        </div>
     
-    <div class="type">
-        <h4>Type:</h4> 
-        <h5><%= pokeProfile.type %></h5>
+        <div class="info">
+            <div class="type">
+                <h4>Type</h4> 
+                    <ul>
+                        <li class="list"><%= pokeProfile.type %></li>
+                    </ul>
+            </div>
+
+            <div class="stats">
+                <h4>Stats</h4>
+                    <ul>
+                        <li class="list">HP: <%= pokeProfile.stats.hp %></li>
+                        <li class="list">Attack: <%= pokeProfile.stats.attack %></li>
+                        <li class="list">Defense: <%= pokeProfile.stats.defense %></li>
+                    </ul>
+            </div>
+        </div>
+
     </div>
-
-    <div class="stats">
-        <h4>Stats:</h4>
-        <h5>HP: <%= pokeProfile.stats.hp %></h4>
-        <h5>Attack: <%= pokeProfile.stats.attack %></h4>
-        <h5>Defense: <%= pokeProfile.stats.defense %></h4>
-    </div>
-
-    <div class="change">
-        <a href="/pokemon/<%= id %>/edit"><button>Edit</button></a>
-
-        <form action="/pokemon/<%= id %>?_method=DELETE" method="post">
-            <input type="submit" value="Delete"/>    
-        </form>
-    </div>
-
-    <h4><a class="home" href="/pokemon">Home</a></h4>
 
     
 </body>

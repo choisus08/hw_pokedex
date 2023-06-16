@@ -9,14 +9,42 @@
 </head>
 <body>
     
-    <h2>Pokemon Profile</h2>
+    <div class="top">
+        <h1>Pokemon Manager</h1>
+    </div>
 
-    <h3>Edit: <%= pokeProfile.name %></h3>
+    <div class="bottom">
+        <h3>Edit: <%= pokeProfile.name %></h3>
 
-    <form action="/pokemon/<%= id %>?_method=PUT" method="post">
-        <input type="text" name="name" placeholder="pokemon name" value="<%= pokeProfile.name %>" />
-        <input type="submit" value="Edit <%= pokeProfile.name %>" />
-    </form>
+        <img src="<%= pokeProfile.img %>" alt="Pokemon Image">
+
+        <form class="manager" action="/pokemon/<%= id %>?_method=PUT" method="post">
+            <input type="text" name="name" placeholder="pokemon name" value="<%= pokeProfile.name %>" />
+            <input list="types" name="type" id="type" placeholder="Type"/>
+                <datalist id="types">
+                    <option value="Normal">
+                    <option value="Bug">
+                    <option value="Dragon">
+                    <option value="Electric">
+                    <option value="Fighting">
+                    <option value="Fire">
+                    <option value="Flying">
+                    <option value="Ghost">
+                    <option value="Grass">
+                    <option value="Ground">
+                    <option value="Ice">
+                    <option value="Poison">
+                    <option value="Psychic">
+                    <option value="Rock">
+                    <option value="Steel">
+                    <option value="Water">
+                </datalist>
+            <input type="number" name="hp" placeholder="HP" />
+            <input type="number" name="attack" placeholder="Attack">
+            <input type="number" name="defense" placeholder="Defense">
+            <input class="edit_submit" type="submit" value="Edit <%= pokeProfile.name %>" />
+        </form>
+    </div>
 
 </body>
 </html>

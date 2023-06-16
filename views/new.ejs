@@ -11,40 +11,43 @@
     
     <div class="top">
         <h1>Pokemon Manager</h1>
+        <h4><a href="/pokemon"><button class="home">Home</button></a></h4>
     </div>
 
-    <h3>Create a Pokemon</h3>
+    <div class="bottom">
+        <h2>Create a Pokemon</h2>
 
-    <img class="new_img" src="../img/pokeball.png" alt="New Pokemon Image" /> 
+       
 
-    <form class="manager" class="new_form" action="/pokemon" method="post">
-        <input type="text" name="name" placeholder="Pokemon name"/>
-        <input list="types" name="type" id="type" placeholder="Type"/>
-            <datalist id="types">
-                <option value="Normal">
-                <option value="Bug">
-                <option value="Dragon">
-                <option value="Electric">
-                <option value="Fighting">
-                <option value="Fire">
-                <option value="Flying">
-                <option value="Ghost">
-                <option value="Grass">
-                <option value="Ground">
-                <option value="Ice">
-                <option value="Poison">
-                <option value="Psychic">
-                <option value="Rock">
-                <option value="Steel">
-                <option value="Water">
-            </datalist>
-        <input type="number" name="hp" placeholder="HP" />
-        <input type="number" name="attack" placeholder="Attack">
-        <input type="number" name="defense" placeholder="Defense">
-        <input class="create" type="submit" value="Create Pokemon" />
-    </form>
+        <form class="manager" class="new_form" action="/pokemon" method="post">
+            <input type="text" name="name" placeholder="Pokemon name"/>
+            <input list="types" name="type" id="type" placeholder="Type"/>
+           
+                <datalist id="types">
+                    <option value="Normal">
+                    <option value="Bug">
+                    <option value="Dragon">
+                    <option value="Electric">
+                    <option value="Fighting">
+                    <option value="Fire">
+                    <option value="Flying">
+                    <option value="Ghost">
+                    <option value="Grass">
+                    <option value="Ground">
+                    <option value="Ice">
+                    <option value="Poison">
+                    <option value="Psychic">
+                    <option value="Rock">
+                    <option value="Steel">
+                    <option value="Water">
+                </datalist>
+            <input type="number" name="hp" placeholder="HP" />
+            <input type="number" name="attack" placeholder="Attack">
+            <input type="number" name="defense" placeholder="Defense">
+            <input class="create" type="submit" value="Create Pokemon" />
+        </form>
 
-    <h4><a class="home" href="/pokemon">Home</a></h4>
+    </div>
 
 </body>
 </html>

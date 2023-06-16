@@ -15,10 +15,10 @@
     </div>
 
     <div class="bottom">
-        <ul>
+        <ul class="img_grid">
             <% for (let i=0; i<pokemon.length; i++) { %>
                 <li>
-                    <a href="/pokemon/<%= i %>"><img src="<%= pokemon[i].img %>" alt="Pokemon Image"/></a>
+                    <a href="/pokemon/<%= i %>"><img class="index_img" src="<%= pokemon[i].img %>" alt="Pokemon Image"/></a>
                 </li>
             <% } %>
         </ul>
