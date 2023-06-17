@@ -16,13 +16,9 @@
 
     <div class="bottom">
         <h2>Create a Pokemon</h2>
-
-       
-
         <form class="manager" class="new_form" action="/pokemon" method="post">
             <input type="text" name="name" placeholder="Pokemon name"/>
             <input list="types" name="type" id="type" placeholder="Type"/>
-           
                 <datalist id="types">
                     <option value="Normal">
                     <option value="Bug">
@@ -44,6 +40,9 @@
             <input type="number" name="hp" placeholder="HP" />
             <input type="number" name="attack" placeholder="Attack">
             <input type="number" name="defense" placeholder="Defense">
+            <input type="number" name="spattack" placeholder="SP Attack">
+            <input type="number" name="spdefense" placeholder="SP Defense">
+            <input type="number" name="speed" placeholder="Speed">
             <input class="create" type="submit" value="Create Pokemon" />
         </form>
 
