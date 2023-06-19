@@ -17,7 +17,7 @@
     <div class="bottom">
         <h2>EDIT: <%= pokeProfile.name %></h2>
 
-        <img src="<%= pokeProfile.img %>" alt="Pokemon Image">
+        <img class="edit_img" src="<%= pokeProfile.img %>" alt="Pokemon Image">
 
         <form class="manager" action="/pokemon/<%= id %>?_method=PUT" method="post">
             <input type="text" name="name" placeholder="pokemon name" value="<%= pokeProfile.name %>" />

@@ -30,9 +30,11 @@
         <div class="info">
             <div class="type">
                 <h4>Type</h4> 
+                <% for (let i=0; i<pokeProfile.type.length; i++) { %>
                     <ul class="data_list">
-                        <li class="data"><%= pokeProfile.type %></li>
+                        <li class="data"><%= pokeProfile.type[i] %></li>
                     </ul>
+                    <% } %>
             </div>
 
             <div class="stats">

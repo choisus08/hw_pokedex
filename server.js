@@ -30,7 +30,7 @@ app.get("/pokemon/new", (req, res) => {
 app.delete("/pokemon/:id", (req, res) => {
     const id = req.params.id;
     pokemon.splice(id, 1);
-    res.redirect("/pokemon")
+    res.redirect("/pokemon");
 });
 
 
@@ -85,9 +85,6 @@ app.get("/pokemon/:id/edit", (req, res) => {
 app.get("/pokemon/:id", (req, res) => {
     const id = req.params.id;
     const pokeProfile = pokemon[id];
-    // let type = req.body.type;
-    // let splitType = type.split(" ");
-    // pokeProfile.type = splitType
     res.render("show.ejs", {pokeProfile, id});
 });
 
