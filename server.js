@@ -66,7 +66,10 @@ app.post("/pokemon", (req, res) => {
     newPokemon.stats = {
         hp: req.body.hp,
         attack: req.body.attack,
-        defense: req.body.defense
+        defense: req.body.defense,
+        spattack: req.body.spattack,
+        spdefense: req.body.spdefense,
+        speed: req.body.speed
     };
     pokemon.unshift(newPokemon);
     res.redirect("/pokemon");
