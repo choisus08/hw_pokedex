@@ -12,7 +12,6 @@ h1, h2, .add, .create, .edit_button, .delete_button, .edit_submit, .home, .img_c
     font-family: VT323;
 }
 
-
 .add, .create, .delete_button, .edit_button, .edit_submit, .home {
     cursor: pointer;
 }
@@ -36,8 +35,7 @@ h1 {
     background-color: rgb(242, 231, 104);
     border-radius: 20px;
     height: auto;   
-    
-    
+  
 }
 
 .index_img {
@@ -48,7 +46,10 @@ h1 {
     width: 9em;
     padding: .5em;
     box-shadow: 10px 10px 4px #7a7979;
-    
+}
+
+.index_list {
+    margin: auto;
 }
 
 .show_img {
@@ -63,18 +64,18 @@ h1 {
 
 .img_grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5em;
     list-style: none;
     padding: 2em;
-    
-    
 }
 
 .manager {
     display: grid;
     gap: 1em;
-    width: 4em;
+    margin: auto ;
+    padding: 1em;
+    width: 30%;
 }
 
 .info {
@@ -82,7 +83,6 @@ h1 {
     justify-content: center;
     gap: 3em;
     text-align: center;
-
 }
 
 .name {
@@ -96,7 +96,6 @@ h1 {
     background-color: rgb(50, 50, 237);
     border-radius: 15px;
     margin: .5em;
-    
 }
 
 .data {
@@ -117,12 +116,6 @@ h1 {
     font-size: 1.2em;
 }
 
-.manager {
-    margin: auto ;
-    padding: 1em 0;
-    width: 30%
-}
-
 .create_header {
     text-align: center;
 }
@@ -138,7 +131,6 @@ h1 {
 .img_container {
     text-align: center; 
     border-bottom: .3em solid  rgb(85, 88, 88);
-   
 }
 
 .change {
@@ -164,12 +156,18 @@ h1 {
 
 @media screen and (max-width: 600px) {
     .index_img {
-        height: 8em;
-        width: 8em;
+        height: 6.5em;
+        width: 6.5em;
+        box-shadow: 6px 6px 4px #7a7979;
     }
 
     .img_grid {
         grid-template-columns: repeat(3, 1fr);
+        padding: 10px;
+    }
+
+    .top {
+        font-size: 15px
     }
 
 }

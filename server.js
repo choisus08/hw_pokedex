@@ -39,6 +39,15 @@ app.put("/pokemon/:id", (req, res) => {
     const id = req.params.id;
     let updatedPokemon = pokemon[id];
     updatedPokemon.name = req.body.name;
+    updatedPokemon.type = req.body.type;
+    updatedPokemon.stats = {
+        hp: req.body.hp,
+        attack: req.body.attack,
+        defense: req.body.defense,
+        spattack: req.body.spattack,
+        spdefense: req.body.spdefense,
+        speed: req.body.speed
+    };
     pokemon[id] = updatedPokemon;
     res.redirect("/pokemon");
 });
@@ -76,6 +85,9 @@ app.get("/pokemon/:id/edit", (req, res) => {
 app.get("/pokemon/:id", (req, res) => {
     const id = req.params.id;
     const pokeProfile = pokemon[id];
+    // let type = req.body.type;
+    // let splitType = type.split(" ");
+    // pokeProfile.type = splitType
     res.render("show.ejs", {pokeProfile, id});
 });
 
