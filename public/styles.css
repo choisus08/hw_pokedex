@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
+*{
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(85, 88, 88);
 }
 
-h1, h2, .add, .create, .edit_button, .delete_button, .edit_submit, .home, .img_container, .stats, .type{
+h1, h2, .add, .create, .edit_button, .delete_button, .edit_submit, .home, .img_container, .class, .stats, .type{
     font-family: VT323;
 }
 
@@ -31,7 +35,8 @@ h1 {
 .bottom {
     background-color: rgb(242, 231, 104);
     border-radius: 20px;
-    height: 100vh;   
+    height: auto;   
+    
     
 }
 
@@ -43,7 +48,7 @@ h1 {
     width: 9em;
     padding: .5em;
     box-shadow: 10px 10px 4px #7a7979;
-   
+    
 }
 
 .show_img {
@@ -61,6 +66,8 @@ h1 {
     grid-template-columns: repeat(4, 1fr);
     gap: 1em;
     list-style: none;
+    padding: 2em;
+    
     
 }
 
@@ -82,26 +89,24 @@ h1 {
     font-size: 2em;
 }
 
-.stats, .type {
+.class, .stats, .type {
     font-size: 1.5em;
     border: .2em solid rgb(50, 50, 237);
     color: white;
     background-color: rgb(50, 50, 237);
     border-radius: 15px;
-    margin: 1em;
+    margin: .5em;
     
 }
 
 .data {
     text-align: center;
-    list-style: none;
-    
-    
+    list-style: none;  
 }
 
 .data_list {
-    padding: 30px
-   
+    padding: 10px 30px;
+    font-size: 22px;
 }
 
 .add {
@@ -110,6 +115,16 @@ h1 {
     background-color: rgb(228, 175, 42);
     border: none;
     font-size: 1.2em;
+}
+
+.manager {
+    margin: auto ;
+    padding: 1em 0;
+    width: 30%
+}
+
+.create_header {
+    text-align: center;
 }
 
 .create, .edit_submit {
